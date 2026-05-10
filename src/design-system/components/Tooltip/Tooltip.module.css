@@ -1,0 +1,25 @@
+.anchor {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.bubble {
+  position: absolute;
+  z-index: var(--ds-z-tooltip);
+  left: 50%;
+  bottom: calc(100% + var(--ds-space-2));
+  transform: translateX(-50%);
+  min-width: max-content;
+  max-width: var(--ds-max-width-sm);
+  padding: var(--ds-space-2) var(--ds-space-3);
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-line-height-snug);
+  color: var(--ds-color-text-inverse);
+  background-color: var(--ds-color-bg-inverse);
+  border-radius: var(--ds-radius-sm);
+  box-shadow: var(--ds-shadow-md);
+  pointer-events: none;
+}

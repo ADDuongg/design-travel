@@ -1,0 +1,42 @@
+.viewport {
+  position: fixed;
+  right: var(--ds-space-4);
+  bottom: var(--ds-space-4);
+  z-index: var(--ds-z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-3);
+  max-width: min(100vw - var(--ds-space-8), var(--ds-max-width-sm));
+  pointer-events: none;
+}
+
+.item {
+  pointer-events: auto;
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-snug);
+  padding: var(--ds-space-3) var(--ds-space-4);
+  border-radius: var(--ds-radius-md);
+  border: 1px solid var(--ds-color-border);
+  box-shadow: var(--ds-shadow-lg);
+}
+
+.success {
+  background-color: var(--ds-color-success-bg);
+  color: var(--ds-color-success-fg);
+}
+
+.warning {
+  background-color: var(--ds-color-warning-bg);
+  color: var(--ds-color-warning-fg);
+}
+
+.error {
+  background-color: var(--ds-color-error-bg);
+  color: var(--ds-color-error-fg);
+}
+
+.info {
+  background-color: var(--ds-color-info-bg);
+  color: var(--ds-color-info-fg);
+}

@@ -1,0 +1,7 @@
+/**
+ * Optional fallbacks before ThemeProvider hydrates; ThemeProvider overwrites --ds-* on :root.
+ */
+
+:root {
+  color-scheme: light dark;
+}

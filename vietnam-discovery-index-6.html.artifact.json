@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "Đất Việt — entry HTML",
+  "entry": "vietnam-discovery-index-6.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-05-10T04:35:39.056Z",
+  "updatedAt": "2026-05-10T04:35:39.255Z",
+  "sourceSkillId": "blog-post",
+  "designSystemId": "default",
+  "metadata": {
+    "identifier": "vietnam-discovery-index",
+    "artifactType": "text/html",
+    "inferred": false
+  }
+}

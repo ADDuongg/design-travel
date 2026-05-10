@@ -1,0 +1,21 @@
+.card {
+  background-color: var(--ds-color-surface);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-lg);
+  box-shadow: var(--ds-shadow-sm);
+  overflow: hidden;
+}
+
+.section {
+  padding: var(--ds-space-4);
+}
+
+.header {
+  padding: var(--ds-space-4);
+  border-bottom: 1px solid var(--ds-color-border);
+}
+
+.footer {
+  padding: var(--ds-space-4);
+  border-top: 1px solid var(--ds-color-border);
+}

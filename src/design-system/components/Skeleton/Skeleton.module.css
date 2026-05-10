@@ -1,0 +1,21 @@
+.skeleton {
+  display: block;
+  border-radius: var(--ds-radius-md);
+  background: linear-gradient(
+    90deg,
+    var(--ds-color-bg-muted) 0%,
+    var(--ds-color-surface-hover) 50%,
+    var(--ds-color-bg-muted) 100%
+  );
+  background-size: 200% 100%;
+  animation: ds-shimmer var(--ds-duration-slower) var(--ds-ease-in-out) infinite;
+}
+
+@keyframes ds-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
