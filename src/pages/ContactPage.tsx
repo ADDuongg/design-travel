@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Link, useSearchParams } from "react-router-dom";
+import { getHotel } from "@/data/hotels";
+import { getRoomByRouteSlug } from "@/data/rooms";
 import { getTour } from "@/data/tours";
 import { ParallaxHero } from "@/components/motion/ParallaxHero";
 import { Reveal, Stagger, RevealItem } from "@/components/motion/Reveal";
@@ -73,16 +75,40 @@ export function ContactPage() {
   const resetTimer = useRef<ReturnType<typeof window.setTimeout> | null>(null);
 
   useEffect(() => {
-    const slug = searchParams.get("tour");
-    if (!slug) return;
-    const t = getTour(slug);
-    if (!t) return;
-    setJourneyInterest((prev) => prev || t.title);
-    setMessage(
-      (prev) =>
-        prev ||
-        `I'd love to discuss "${t.title}" (${t.region}). `,
-    );
+    const roomSlug = searchParams.get("room");
+    const staySlug = searchParams.get("stay");
+    const tourSlug = searchParams.get("tour");
+
+    if (roomSlug) {
+      const r = getRoomByRouteSlug(roomSlug);
+      if (r) {
+        setJourneyInterest((prev) => prev || `${r.name} · ${r.hotelTitle}`);
+        setMessage(
+          (prev) =>
+            prev ||
+            `I'd like to inquire about the room "${r.name}" at ${r.hotelTitle}. `,
+        );
+        return;
+      }
+    }
+    if (staySlug) {
+      const h = getHotel(staySlug);
+      if (h) {
+        setJourneyInterest((prev) => prev || h.title);
+        setMessage((prev) => prev || `I'd like to inquire about staying at "${h.title}". `);
+        return;
+      }
+    }
+    if (tourSlug) {
+      const t = getTour(tourSlug);
+      if (!t) return;
+      setJourneyInterest((prev) => prev || t.title);
+      setMessage(
+        (prev) =>
+          prev ||
+          `I'd love to discuss "${t.title}" (${t.region}). `,
+      );
+    }
   }, [searchParams]);
 
   useEffect(() => {

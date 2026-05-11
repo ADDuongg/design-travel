@@ -3,6 +3,8 @@ import { NavLink, useLocation } from "react-router-dom";
 const links = [
   { to: "/", label: "Home" },
   { to: "/journeys", label: "Journeys" },
+  { to: "/hotels", label: "Stays" },
+  { to: "/rooms", label: "Rooms" },
   { to: "/guides", label: "Guides" },
   { to: "/provinces", label: "Provinces" },
   { to: "/cities", label: "Cities" },

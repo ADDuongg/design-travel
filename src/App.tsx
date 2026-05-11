@@ -14,6 +14,10 @@ import { TourDetailPage } from "@/pages/TourDetailPage";
 import { TourListPage } from "@/pages/TourListPage";
 import { TourGuideDetailPage } from "@/pages/TourGuideDetailPage";
 import { TourGuideListPage } from "@/pages/TourGuideListPage";
+import { HotelDetailPage } from "@/pages/HotelDetailPage";
+import { HotelListPage } from "@/pages/HotelListPage";
+import { RoomDetailPage } from "@/pages/RoomDetailPage";
+import { RoomListPage } from "@/pages/RoomListPage";
 
 export default function App() {
   return (
@@ -25,6 +29,10 @@ export default function App() {
         <Route path="gallery" element={<GalleryPage />} />
         <Route path="journeys" element={<TourListPage />} />
         <Route path="journeys/:slug" element={<TourDetailPage />} />
+        <Route path="hotels" element={<HotelListPage />} />
+        <Route path="hotels/:slug" element={<HotelDetailPage />} />
+        <Route path="rooms" element={<RoomListPage />} />
+        <Route path="rooms/:slug" element={<RoomDetailPage />} />
         <Route path="guides" element={<TourGuideListPage />} />
         <Route path="guides/:slug" element={<TourGuideDetailPage />} />
         <Route path="provinces" element={<ProvincesListPage />} />
